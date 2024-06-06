@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NotePad/static/css/main.87ab02da.css",
+    "main.js": "/NotePad/static/js/main.80006a2d.js",
+    "index.html": "/NotePad/index.html",
+    "main.87ab02da.css.map": "/NotePad/static/css/main.87ab02da.css.map",
+    "main.80006a2d.js.map": "/NotePad/static/js/main.80006a2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87ab02da.css",
+    "static/js/main.80006a2d.js"
+  ]
+}
