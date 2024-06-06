@@ -1,3 +1,18 @@
+# NotePad
+Notes App is a web application that allows users to securely log in, create, view, and manage their personal notes. Built with React for the front-end, MongoDB for the database, and Bootstrap for styling, this app provides a seamless and intuitive user experience.
+<h2>Features</h2>
+<li><b>User Authentication:</b> Secure user registration and login functionality to protect personal data.</li>
+<li><b>Add Notes:</b> Users can create new notes with a simple and clean interface.</li>
+<li><b>View Notes:</b> All saved notes are displayed in an organized manner, making it easy to review past notes.</li>
+<li><b>Edit and Delete Notes:</b> Users can update or delete their notes as needed.</li>
+<li><b>Responsive Design:</b> The application is fully responsive, ensuring a great experience on both desktop and mobile devices.</li>
+<h2>Technologies Used</h2>
+<li><b>Front-end:</b> React.js, Bootstrap</li>
+<li><b>Back-end:</b> Node.js, Express.js</li>
+<li><b>Database:</b> MongoDB</li>
+<li><b>Authentication:</b> JWT (JSON Web Tokens)</li>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
