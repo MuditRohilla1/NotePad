@@ -12,6 +12,7 @@ import {
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { useState } from 'react';
+import Footer from './components/Footer';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -42,6 +43,7 @@ function App() {
           </div>
         </Router>
       </NoteState>
+      <Footer/>
     </>
   );
 }

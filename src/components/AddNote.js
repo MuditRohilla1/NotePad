@@ -24,10 +24,10 @@ const AddNote = (props) => {
         <h2 className='mb-2 text-center'>Add a Note</h2>
         <form>
             <div className="mb-3">
-                <label htmlFor="title" className="form-label px-2 py-2">Title</label>
+                <label htmlFor="title" className="form-label px-2"><b>Title</b></label>
                 <input
                     type="text"
-                    className="form-control shadow bg-white rounded"
+                    className="form-control shadow text-light bg-dark rounded"
                     id="title"
                     name="title"
                     value={note.title}
@@ -37,10 +37,10 @@ const AddNote = (props) => {
                 />
             </div>
             <div className="mb-3">
-                <label htmlFor="description" className="form-label px-2 py-2">Description</label>
+                <label htmlFor="description" className="form-label px-2"><b>Description</b></label>
                 <input
                     type="text"
-                    className="form-control shadow bg-white rounded"
+                    className="form-control shadow rounded text-light bg-dark"
                     id="description"
                     name="description"
                     value={note.description}
@@ -50,10 +50,10 @@ const AddNote = (props) => {
                 />
             </div>
             <div className="mb-3">
-                <label htmlFor="tag" className="form-label px-2 py-2">Tag</label>
+                <label htmlFor="tag" className="form-label px-2"><b>Tag</b></label>
                 <input
                     type="text"
-                    className="form-control shadow bg-white rounded"
+                    className="form-control shadow rounded text-light bg-dark"
                     id="tag"
                     name="tag"
                     value={note.tag}

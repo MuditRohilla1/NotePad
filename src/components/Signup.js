@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import signupImg from './img/signup.svg'
 
 const Signup = (props) => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" });
@@ -31,7 +32,7 @@ const Signup = (props) => {
             }
         } catch (error) {
             console.error('Error logging in:', error);
-            alert('An error occurred. Please try again.');
+            props.showAlert("An error occurred. Please try again.", "danger");
         }
         setLoading(false);
     };
@@ -41,9 +42,9 @@ const Signup = (props) => {
     };
 
     return (
-        <div className='d-flex justify-content-center align-items-start' style={{ height: '100vh', paddingTop: '80px' }}>
+        <div className='container d-flex flex-column flex-md-row justify-content-center align-items-start' style={{ height: '100vh', paddingTop: '80px' }}>
             <div className='mt-2' style={{ width: '100%', maxWidth: '500px' }}>
-                <h2 className='mb-2 text-center'>Create an account to use iNoteBook</h2>
+                <h2 className='mt-5 text-center'>Create an account to use NotePad</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name" className='px-2 py-2'>Name</label>
@@ -106,6 +107,9 @@ const Signup = (props) => {
                         </button>
                     </div>
                 </form>
+            </div>
+            <div className='image-container d-flex align-items-center justify-content-center' style={{ width: '100%', maxWidth: '500px', marginLeft: '20px' }}>
+                <img src={signupImg} alt="login" style={{ width: '100%', height: 'auto' }} />
             </div>
         </div>
 

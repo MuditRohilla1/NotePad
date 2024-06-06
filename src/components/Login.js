@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import sideImage from './img/sideimg.png'; // Adjust the path accordingly
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -24,14 +25,14 @@ const Login = (props) => {
             if (json.success) {
                 // Save the auth-token and redirect
                 localStorage.setItem('token', json.authtoken);
-                props.showAlert("Logged In Successful", "success");
+                props.showAlert("Logged In Successfully", "success");
                 navigate('/');
             } else {
                 props.showAlert("Invalid Details", "danger");
             }
         } catch (error) {
             console.error('Error logging in:', error);
-            alert('An error occurred. Please try again.');
+            props.showAlert("An error occurred. Please try again.", "danger");
         }
         setLoading(false);
     };
@@ -41,8 +42,8 @@ const Login = (props) => {
     };
 
     return (
-        <div className='d-flex justify-content-center align-items-start' style={{ height: '100vh', paddingTop: '80px' }}>
-            <div className='mt-3' style={{ width: '100%', maxWidth: '500px' }}>
+        <div className='container d-flex flex-column flex-md-row justify-content-center align-items-start' style={{ height: '100vh', paddingTop: '80px' }}>
+            <div className='form-container mt-3' style={{ width: '100%', maxWidth: '500px' }}>
                 <h2 className='mb-2 text-center'>Login to continue to iNoteBook</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -81,8 +82,10 @@ const Login = (props) => {
                     </div>
                 </form>
             </div>
+            <div className='image-container d-flex align-items-center justify-content-center' style={{ width: '100%', maxWidth: '500px', marginLeft: '20px' }}>
+                <img src={sideImage} alt="login" style={{ width: '100%', height: '100%' }} />
+            </div>
         </div>
-
     );
 };
 

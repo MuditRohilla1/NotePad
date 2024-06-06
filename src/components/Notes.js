@@ -15,7 +15,7 @@ const Notes = (props) => {
         else{
             navigate('/login');
         }
-    }, [])
+    })
     const ref = useRef(null)
     const refClose = useRef(null)
     const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" })
@@ -73,8 +73,11 @@ const Notes = (props) => {
                 </div>
             </div>
 
-            <div className="row my-3">
-                <h2>You Notes</h2>
+            <div className="row my-3 justify-content-center">
+                <hr />
+                <div className="d-flex justify-content-center" style={{ fontFamily: "Lora, serif", fontOpticalSizing: "auto", fontWeight: 400, fontStyle: "normal" }}>
+                    <h2>"-----You Notes-----"</h2>
+                </div>
                 <div className="container mx-2">
                     {notes.length === 0 && 'No notes to display'}
                 </div>
